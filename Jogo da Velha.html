@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Unoesc - Jogo da Velha</title>
+		<style>
+			td {
+			    border: 1px solid #ccc;
+			    font-size: 4em;
+			    padding: 15px;
+			    text-align: center;
+			    font-family: Helvetica, sans-serif;
+			    width: 100px;
+			    height: 100px;
+			}
+			table {
+			    border-collapse: collapse;
+			    margin:auto;
+			}
+		</style>
+
+		<script type="text/javascript" src="jquery-2.2.2.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				// controle da jogada
+				var control = "X";
+				var qtdMarcada = 0;
+				var qtdX = 0;
+				var qtdO = 0;
+				var use;
+               
+				// olá ! eu quero jogar um jogo =)
+				$("td").click(function() {
+
+					// pega o valor pra ver se está vazio
+					var value = $(this).attr('value');
+					if(!value) {
+						qtdMarcada += 1;
+
+						if(control == "X") {
+							qtdX +=1;
+							use = "X";
+						} else {
+							qtdO += 1;
+							use = "O";
+						}
+
+						$(this).append(control);
+						$(this).attr('value', control);
+						control = control == "O" ? "X" : "O";
+					}
+
+					var td1 = $("#1").attr('value');
+					var td2 = $("#2").attr('value');
+					var td3 = $("#3").attr('value');
+					var td4 = $("#4").attr('value');
+					var td5 = $("#5").attr('value');
+					var td6 = $("#6").attr('value');
+					var td7 = $("#7").attr('value');
+					var td8 = $("#8").attr('value');
+					var td9 = $("#9").attr('value');
+
+					// controle de quando começar a validar
+					if((use == "O" && qtdO > 2) || (use == "X" && qtdX > 2))  {
+						if(validaCasas(use, td1, td2, td3) || validaCasas(use, td1, td4, td7) || validaCasas(use, td1, td5, td9) || validaCasas(use, td7, td8, td9) || validaCasas(use, td4, td5, td6) || validaCasas(use, td2, td5, td8) || validaCasas(use, td3, td6, td9) || validaCasas(use, td3, td5, td7)) {
+					
+							$("#vencedor").html("<b>Quem ganhou foi " + use + " </b>");
+							$("td").unbind("click");
+						} else {
+							var l = $("#t1 td:empty").length;
+							if(l == 0) {
+								$("#vencedor").html("<b>EMPATE !</b>");
+								$("td").unbind("click");
+							}
+						}
+					}
+				});
+
+				function validaCasas(use, a, b, c) {
+					if(!a || !b || !c) {
+						return false;
+					}
+					return a === use && a === b && b === c;
+				}
+
+			});
+		</script>
+	</head>
+	<body>
+		<table cellspacing="0" cellpadding="0" id="t1">
+			<tbody>
+				<tr>
+					<td id="1"></td>
+					<td id="2"></td>
+					<td id="3"></td>
+				</tr>
+				<tr>
+					<td id="4"></td>
+					<td id="5"></td>
+					<td id="6"></td>
+				</tr>
+				<tr>
+					<td id="7"></td>''
+					<td id="8"></td>
+					<td id="9"></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div id="vencedor"></div>
+	</body>
+
+</html>

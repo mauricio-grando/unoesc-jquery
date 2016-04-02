@@ -1,0 +1,41 @@
+header {
+	text-align: center;
+	position: static;
+	z-index: auto;
+}
+
+#banner, #menu {
+	display: none;
+}
+
+nav {
+	width: 100%;
+	text-align: center;
+}
+
+nav ul li {
+	display: block;
+	list-style: none;
+}
+
+#btnmenu {
+	display: block;
+	float: none;
+}
+
+.colunas, #portfolio, #contato, .form {
+	width: 100%;
+}
+
+.redondo {
+	border-radius: 50%;
+}
+
+.container {
+	width: 90%;
+	margin: 10px;
+}
+
+.box {
+	padding: 50px 0px 50px 0px;
+}

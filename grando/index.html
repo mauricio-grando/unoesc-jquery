@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<title>WebMob Unoesc - jQuery :)</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+
+		<link rel="shortcut icon" href="imgs/icone.png">
+
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/superfish.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+
+		<script type="text/javascript" src="js/jquery-2.2.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.goup.min.js"></script>
+		<script type="text/javascript" src="js/hoverIntent.js"></script>
+		<script type="text/javascript" src="js/superfish.js"></script>
+        <script type="text/javascript" src="js/inputmask.js"></script>
+        <script type="text/javascript" src="js/inputmask.numeric.extensions.js"></script>
+        <script type="text/javascript" src="js/jquery.inputmask.js"></script>
+        <script type="text/javascript" src="js/jquery.inputmask.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/snapGallery.js"></script>
+
+	</head>
+	<body id="topo">
+		<header>
+			<a href="#topo" title="Home" id="logo">Maurício A. Grando</a>
+			<a href="#" id="btnmenu" title="Mostrar Menu">
+				<img src="imgs/menu2.png">
+			</a>
+
+			<ul class="sf-menu" id="menu">
+				<li class="current">
+					<a href="#">Menu</a>
+					<ul>
+						<li>
+							<a href="#">Página Inicial</a>
+						</li>
+						<li class="current">
+							<a href="#">Produtos</a>
+							<ul>
+								<li class="current"><a href="#">Perecíveis</a></li>
+								<li><a href="#">Não Perecíveis</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Cadastro</a>
+						</li>
+						<li>
+							<a href="#sobre">Quem Somos</a>
+						</li>
+						<li>
+							<a href="#contato">Contato</a>
+						</li>
+						<li>
+							<a href="#galeria">Galeria</a>
+						</li>
+						<li>
+							<a href="#portfolio">Portfólio</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</header>
+
+		<div id="banner" class="cycle-slideshow">
+			<img src="imgs/banner1.jpg" alt="Banner 1" title="Banner 1">
+			<img src="imgs/banner2.jpg" alt="Banner 2" title="Banner 2">
+			<img src="imgs/banner3.jpg" alt="Banner 3" title="Banner 3">
+		</div>
+
+		<div id="sobre" class="box">
+			<div class="container">
+				<h1>Sobre Maurício A. Grando</h1>
+				<div class="colunas">
+					<img src="imgs/perfil.jpg" alt="sobre" title="sobre" class="redondo">
+				</div>
+				<div class="colunas">
+					<p>
+						Maurício A. Grando é um estudante de Pós Graduação da Unoesc - Campus Chapecó/SC, formado no curso de Ciência da Computação pela URI - Campus Erechim/RS na turma de 2008.
+					</p>
+					<p>
+						Atualmente trabalha na Compasso Tecnologia, uma empresa parceira Oracle Platinum. Seu cargo atual é Especialista no produto Oracle Commerce, sendo este um dos produtos mais notáveis fornecidos pela Oracle atualmente.
+						É certificado Oracle ATG versão 10, mas atualmente trabalha na versão 11.1
+					</p>
+					<p>
+						Atua na área de liderança técnica de projetos e-commerce usando a plataforma Oracle. Suas atividades vão desde levantamento de requisitos, passando por estimativa de horas, configuração de ambientes, apoio ao time de desenvolvimento e gestão, chegando à entrega final do site e posterior sustentação.
+					</p>
+					<p>
+						Desenvolve utilizando Java, XML, SQL, HTML, Javascript e CSS, e com menos frequência utiliza outras tecnologias necessárias em cada projeto.
+					</p>
+					<p>
+						Nas horas vagas, tenta ser uma pessoa normal e programa apenas por esporte.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="portfolio" class="box">
+			<div class="container">
+				<h1>Portfólio</h1>
+				<div class="colunas">
+					<a href="https://github.com/mauricio-grando/unoesc-brewery-front.git" title="MongoDB" target="_blank">
+						<img src="imgs/mongodb.jpg" alt="MongoDB" title="MongoDB" class="redondo">
+					</a>
+				</div>
+				<div class="colunas">
+					<a href="https://github.com/mauricio-grando/unoesc-brewery-front.git" title="NodeJS" target="_blank">
+						<img src="imgs/nodejs.jpg" alt="NodeJS" title="NodeJS" class="redondo">
+					</a>
+				</div>
+				<div class="colunas">
+					<a href="https://github.com/mauricio-grando/unoesc-desenv-responsive.git" title="Design Responsivo" target="_blank">
+						<img src="imgs/responsive.jpg" alt="Layout Responsivo" title="Layout Responsivo" class="redondo">
+					</a>
+				</div>
+				<div class="colunas">
+					<a href="https://github.com/mauricio-grando" title="GitHub" target="_blank">
+						<img src="imgs/git.jpg" alt="GitHub" title="GitHub" class="redondo">
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="contato" class="box">
+			<div class="container">
+				<h1>Contato</h1>
+				<div id="formMessages" name="formMessages"></div>
+
+				<form name="form1" id="form1" action="#" method="post">
+					<label for="name">Nome:</label><br>
+					<input type="text" id="name" name="name" class="form" placeholder="Digite seu nome" required><br>
+
+					<label for="email">Email:</label><br>
+					<input type="text" id="email" name="email" class="form" placeholder="Digite seu email" required><br>
+
+					<label for="telefone">Telefone:</label><br>
+					<input type="telefone" id="telefone" name="telefone" class="form" placeholder="Digite seu telefone" ><br>
+
+					<label id="nascimento" for="nascimento">Data Nascimento:</label><br>
+					<input type="text" id="datepicker" class="form" placeholder="Digite sua data de nascimento">
+					<br>
+
+					<label for="estado">Estado</label><br>
+					<select id="estado" class="form"></select><br>
+
+					<label for="cidade">Cidade</label><br>
+					<select id="cidade" class="form"></select><br>
+
+					<button type="submit" class="btn">
+						<i class="fa fa-check fa-2x"></i>Enviar Mensagem
+					</button>
+				</form>
+			</div>
+		</div>
+
+		<div id="galeria" class="box">
+			<div class="container">
+				<h1>Galeria</h1>
+				<ul id="gallery-container">
+			        <li><img src="imgs/foto1-g.jpg" title="Lion Rock"></li>
+			        <li><img src="imgs/foto2-g.jpg" title="Holsten Gate"></li>
+			        <li><img src="imgs/foto3-g.jpg" title="Blue Hour"></li>
+			       	<li><img src="imgs/foto4-g.jpg" title="Waikato Landscape"></li>
+			        <li><img src="imgs/foto5-g.jpg" title="Tauranga Bridge"></li>
+			       	<li><img src="imgs/foto6-g.jpg" title="East Coast"></li>
+		        </ul>
+			</div>
+		</div>
+		<footer>
+			WebMob Desenvolvimento Responsivo - Todos os direitos reservados <i class="fa fa-registered fa-fa-lg"></i><br>
+			Desenvolvido por Maurício A. Grando
+			<p>
+				<a href="https://www.facebook.com/mauricio.grando.90" title="Facebook" target="_blank">
+					<img src="imgs/facebook.png" alt="Facebook" title="Facebook">
+				</a>
+				<a href="http://www.twitter.com" title="Twitter" target="_blank">
+					<img src="imgs/twitter.png" alt="Twitter" title="Twitter">
+				</a>
+				<a href="https://www.linkedin.com/in/mauriciogrando" title="Linkedin" target="_blank">
+					<img src="imgs/linkedin.png" alt="Linkedin" title="Linkedin">
+				</a>
+			</p>
+		</footer>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				// instancia o plugin
+				$.goup();
+
+				$('#gallery-container').snapGallery();
+
+				// customização do layout do botão
+				$.goup({
+					containerSize: 35, // tamanho do botão
+					bcolor: "#696969", // cinza
+					trigger: 150 // a partir de quantos pixels ele aparece
+				});
+
+				var menu = $('#menu').superfish({
+				});
+
+				// data
+				$("#datepicker").datepicker({
+				    dateFormat: 'dd/mm/yy',
+				    dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
+				    dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
+				    dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
+				    monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+				    monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
+				    nextText: 'Próximo',
+				    prevText: 'Anterior'
+				});
+
+				// mascara telefone
+	            $("#telefone").inputmask("(99) [9]9999-9999");
+
+	            // inputs estados e cidades
+	            $.getJSON('estados-cidades.json', function( data ) {
+			        var itens = '<option name="">- Selecione um estado -</option>';
+
+			        $.each(data.estados, function (key, val) {
+			            itens = itens + '<option value="' + val.sigla + '">' + val.nome + '</option>';
+			        });
+
+			        $('#estado').html(itens);
+			        $('#estado').change(function () {
+			        	var estado = $(this).val();
+			        	var cidadesSel = '<option name="">- Selecione uma cidade -</option>';
+
+			        	$.each(data.estados, function (key, val) {
+			        		if(val.sigla === estado) {
+			        			$.each(val.cidades, function (key, val) {
+			        				cidadesSel = cidadesSel + '<option value="' + val + '">' + val + '</option>';
+			        			});
+			        		}
+				            
+				        });
+
+				        $('#cidade').html(cidadesSel);
+
+			        }).change();
+			    });
+
+	            $("#form1").submit(function(e){
+    				e.preventDefault();
+
+			    	var emailPattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+			    	var email = $("#email").val();
+			    	if(!emailPattern.test(email)) {
+			    		$('#email').val("");
+			    		$('#email').attr('placeholder','Por favor informe um email válido.');
+			    		$("#email").focus();
+			    	}
+
+			    });
+
+			});
+		</script>
+	</body>
+</html>

@@ -30,10 +30,6 @@
 	<body id="topo">
 		<header>
 			<a href="#topo" title="Home" id="logo">Maurício A. Grando</a>
-			<a href="#" id="btnmenu" title="Mostrar Menu">
-				<img src="imgs/menu2.png">
-			</a>
-
 			<ul class="sf-menu" id="menu">
 				<li class="current">
 					<a href="#">Menu</a>
@@ -162,6 +158,7 @@
 		<div id="galeria" class="box">
 			<div class="container">
 				<h1>Galeria</h1>
+				<br>
 				<ul id="gallery-container">
 			        <li><img src="imgs/foto1-g.jpg" title="Lion Rock"></li>
 			        <li><img src="imgs/foto2-g.jpg" title="Holsten Gate"></li>
@@ -190,10 +187,14 @@
 
 		<script type="text/javascript">
 			$(document).ready(function(){
+				$('#gallery-container').snapGallery({
+					minWidth: 100,
+					maxCols: 2,
+					margin: 2
+				});
+
 				// instancia o plugin
 				$.goup();
-
-				$('#gallery-container').snapGallery();
 
 				// customização do layout do botão
 				$.goup({

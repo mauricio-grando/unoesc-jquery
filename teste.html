@@ -24,6 +24,8 @@
 
             <label for="telefone">Telefone</label>
             <input type="text" id="telefone"><br/>
+
+            Imagem: <input type="file" name="pic" accept="image/*">
         </form>
 
     </body>
@@ -33,7 +35,7 @@
             $("#nascimento").inputmask("99/99/9999");
             $("#rg").inputmask("9{7,10}-9");
             $("#cpf").inputmask("999.999.999-99");
-            $("#telefone").inputmask("(99) 9999-9999[9]");
+            $("#telefone").inputmask("(99) [9]9999-9999");
         });
     </script>
 </html>

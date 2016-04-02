@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Custom Plugin</title>
+
+        <script type="text/javascript" src="jquery-2.2.2.min.js"></script>
+        <script type="text/javascript" src="grando.js"></script>
+    </head>
+    <body>
+
+        Imagem 1: <img class="img" src="http://www.go2web.com.br/fotos/18072014_190738_Meme-Jackie.jpg" alt="Imagem 1 Teste" title="Imagem 1 Teste"><br/><br/>
+        Imagem 2: <img class="img" src="http://s.glbimg.com/po/tt/f/original/2012/04/13/ui_eles_vao_explicar_o_meme.jpg" alt="Imagem 2 Teste" title="Imagem 2 Teste"><br/><br/>
+        Imagem 3: <img class="img" src="http://impressaodigital126.com.br/wp-content/uploads/2014/07/obama.jpg" alt="" title="Imagem 3 Teste"><br/><br/>
+
+        <br/><br/><br/><br/><br/><br/>
+        <div id="texto">
+            Opa, eu vou ir e sujar a casa.
+        </div>
+
+    </body>
+    <script>
+        $(document).ready(function(){
+            $('img').each(function(){
+                $(this).showImageAlt();
+            });
+
+            var novoTexto = $("#texto").encodeText();
+            $("#texto").html(novoTexto);
+        });
+    </script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Ajax Estados e Cidades</title>
+
+		<script type="text/javascript" src="jquery-2.2.2.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+			    $.getJSON('estados-cidades.json', function( data ) {
+			        var itens = '<option name="">- Selecione um estado -</option>';
+
+			        $.each(data.estados, function (key, val) {
+			            itens = itens + '<option value="' + val.sigla + '">' + val.nome + '</option>';
+			        });
+
+			        $('#estado').html(itens);
+			        $('#estado').change(function () {
+			        	var estado = $(this).val();
+			        	var cidadesSel = '<option name="">- Selecione uma cidade -</option>';
+
+			        	$.each(data.estados, function (key, val) {
+			        		if(val.sigla === estado) {
+			        			$.each(val.cidades, function (key, val) {
+			        				cidadesSel = cidadesSel + '<option value="' + val + '">' + val + '</option>';
+			        			});
+			        		}
+				            
+				        });
+
+				        $('#cidade').html(cidadesSel);
+
+			        }).change();
+			    });
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Formulário de Cadastro</h1>
+		<label for="estado">Estado</label>
+		<select id="estado">
+			
+		</select>
+
+		<label for="cidade">Cidade</label>
+		<select id="cidade">
+			
+		</select>
+
+	</body>
+</html>
